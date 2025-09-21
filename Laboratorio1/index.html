@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/prism.css" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet">
-    <title>Estilo Web Informativo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Introducción a la Programación Web</title>
+    
+    <style>
+            
+            .cont-degrd {
+                background: linear-gradient(to right, #ffffff, #f8fdfb, #eef1f1);
+                margin-left: 10px;
+                padding: 20px;
+            }
+            .container-info{
+                background: #fde2e2;
+                border-radius: 6px;
+                margin: 40px;
+                padding: 20px;
+                max-width: 700px;
+            }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Intro a PHP</a>
+            <a class="navbar-brand" href="#">Introdución a la programación</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,27 +41,76 @@
             </div>
         </div>
     </nav>
-
-    <!-- Contenido Principal -->
-    <div class="container mt-5">
+    <div class="container">
+    
+    <div class="cont-degrd">
+        <div class="row">
+    <div class="col">
+      <img src="./img/intro.jpg" alt="Introducción" class="img-fluid rounded" width="350">
+    </div>
+    <div class="col">
+      <img src="./img/code.png" alt="Código" class="img-fluid rounded" width="350">
+    </div>
+    <div class="col">
+      <img src="./img/ProcesoPHP.png" alt="Proceso PHP" class="img-fluid rounded" width="450">
+    </div>
+  </div>
+    <div class="container text-center mt-5" style="margin-left: 100px;">
+    <div class="row align-items-center">
+        
+    <div class="container-info mt-5">
         <section id="intro">
-            <h1 class="text-center mb-4">Introducción a la Programación Web con PHP</h1>
-            <p>PHP es un lenguaje de programación de servidor ampliamente usado para el desarrollo web. Es ideal para principiantes porque es fácil de aprender y se integra bien con HTML. En esta página, exploraremos estructuras de control básicas que te ayudarán a controlar el flujo de tu código.</p>
+            <div class="info-container">
+                <div class="card shadow card w-100">
+                    <div class="card-header bg-primary text-white card-body fs-4 lh-lg">
+                        <div class="info-header" onclick="toggleInfo()"> 
+                            <span>Indice de Contenido</span>
+                            <span class="toggle-link" id="toggleLink">[Mostrar]</span>
+                        </div>
+                        </div>
+                
+                <div class="info-content" id="infoContent" style="display: none;">
+                        <li class="nav-item"><a class="nav-link" href="#QueesPHP">¿Qué es PHP?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#UsoPHP">¿Por qué usar PHP en desarrollo web?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Conceptos">Conceptos Básicos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#if">If</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#switch">Switch</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#while">While</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#for">For</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#foreach">Foreach</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            <h1 class="text-center mb-4">Introducción a la Programación Web</h1>
+            <section id="QueesPHP" class="mt-5">
+            <p class="text-center mb-4"><strong>¿Qué es PHP? </strong> (Hypertext Preprocessor) es un lenguaje de programación de código abierto diseñado para el desarrollo web. 
+                Es un lenguaje del lado del servidor, lo que significa que el código se ejecuta en el servidor (como Apache en XAMPP) antes 
+                de enviar el resultado (HTML, generalmente) al navegador del usuario. Es ideal para principiantes por su sintaxis sencilla y su 
+                integración con HTML, bases de datos (como MySQL) y frameworks. PHP es ampliamente utilizado en sitios como WordPress, Joomla y 
+                tiendas en línea. </p>
+            </section>
+            <section id="UsoPHP" class="mt-5">
+                <h1 class="text-center mb-4">¿Por qué usar PHP en desarrollo web?</h1>
+                <p class="text-center mb-4"> <strong>* Facilidad de uso:</strong> Sintaxis similar a C, fácil de aprender.</p>
+                <p class="text-center mb-4"><strong>* Integración con HTML:</strong> Puedes incrustar PHP dentro de HTML para generar contenido dinámico.</p>
+                <p class="text-center mb-4"><strong>* Compatibilidad:</strong> Funciona con servidores como Apache y bases de datos como MySQL (vía XAMPP, por ejemplo).</p>
+                <p class="text-center mb-4"><strong>* Comunidad y recursos:</strong> Amplia documentación y soporte.</p>
+                <p class="text-center mb-4"><strong>* Versatilidad:</strong> Sirve para crear desde páginas simples hasta aplicaciones complejas.</p></section>
+                <section id="Conceptos" class="mt-5">
+                <h1 class="text-center mb-4">Conceptos básicos:</h1>
+                <p class="text-center mb-4">- PHP se escribe dentro de etiquetas <?php ?>.</p>
+                <p class="text-center mb-4">- Los archivos tienen extensión <strong>.php</strong>.</p></section>
+                <p><strong>En esta página, exploraremos estructuras de control básicas que te ayudarán a controlar el flujo de tu código.</strong> </p>
         </section>
 
         <section id="if" class="mt-5">
             <div class="card">
-                <div class="card-header bg-info text-white"><h2>If</h2></div>
+                <div class="card-header bg-info text-black"><h2>If</h2></div>
                 <div class="card-body">
                     <p>La estructura <code>if</code> se usa para ejecutar código si una condición es verdadera. Puedes agregar <code>else</code> para alternativas.</p>
-                    <pre><code class="language-php">&lt;?php
-$edad = 18;
-if ($edad >= 18) {
-    echo "Eres mayor de edad.";
-} else {
-    echo "Eres menor de edad.";
-}
-?&gt;</code></pre>
+                        <img src="img/if.png" alt="Resultado del ejemplo If" class="img-fluid">
                     <p>Ejemplo: Verifica si un usuario puede votar basado en su edad.</p>
                 </div>
             </div>
@@ -58,19 +121,7 @@ if ($edad >= 18) {
                 <div class="card-header bg-info text-white"><h2>Switch</h2></div>
                 <div class="card-body">
                     <p>La estructura <code>switch</code> evalúa una variable contra múltiples casos, ideal para menús o selecciones.</p>
-                    <pre><code class="language-php">&lt;?php
-$dia = "Lunes";
-switch ($dia) {
-    case "Lunes":
-        echo "Inicio de semana.";
-        break;
-    case "Viernes":
-        echo "Fin de semana cerca.";
-        break;
-    default:
-        echo "Día normal.";
-}
-?&gt;</code></pre>
+                        <img src="img/switch.png" alt="Resultado del ejemplo Switch" class="img-fluid">
                     <p>Ejemplo: Muestra un mensaje según el día de la semana.</p>
                 </div>
             </div>
@@ -81,13 +132,7 @@ switch ($dia) {
                 <div class="card-header bg-info text-white"><h2>While</h2></div>
                 <div class="card-body">
                     <p>El bucle <code>while</code> repite código mientras una condición sea verdadera.</p>
-                    <pre><code class="language-php">&lt;?php
-$contador = 1;
-while ($contador <= 5) {
-    echo "Número: $contador &lt;br&gt;";
-    $contador++;
-}
-?&gt;</code></pre>
+                        <img src="img/while.png" alt="Resultado del ejemplo While" class="img-fluid">
                     <p>Ejemplo: Imprime números del 1 al 5.</p>
                 </div>
             </div>
@@ -98,11 +143,7 @@ while ($contador <= 5) {
                 <div class="card-header bg-info text-white"><h2>For</h2></div>
                 <div class="card-body">
                     <p>El bucle <code>for</code> es compacto para repeticiones con contador conocido.</p>
-                    <pre><code class="language-php">&lt;?php
-for ($i = 0; $i < 10; $i++) {
-    echo "Iteración: $i &lt;br&gt;";
-}
-?&gt;</code></pre>
+                        <img src="img/for.png" alt="Resultado del ejemplo For" class="img-fluid">
                     <p>Ejemplo: Cuenta del 0 al 9.</p>
                 </div>
             </div>
@@ -113,21 +154,56 @@ for ($i = 0; $i < 10; $i++) {
                 <div class="card-header bg-info text-white"><h2>Foreach</h2></div>
                 <div class="card-body">
                     <p>El bucle <code>foreach</code> itera sobre arrays o colecciones.</p>
-                    <pre><code class="language-php">&lt;?php
-$colores = array("rojo", "verde", "azul");
-foreach ($colores as $color) {
-    echo "Color: $color &lt;br&gt;";
-}
-?&gt;</code></pre>
+                        <img src="img/foreach.png" alt="Resultado del ejemplo Foreach" class="img-fluid">
                     <p>Ejemplo: Lista colores de un array.</p>
                 </div>
             </div>
         </section>
     </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function toggleInfo() {
+                var content = document.getElementById("infoContent");
+                var toggleLink = document.getElementById("toggleLink");
+                if (content.style.display === "none" || content.style.display === "") {
+                    content.style.display = "block";
+                    content.style.opacity = "0";
+                    setTimeout(function() {
+                        content.style.transition = "opacity 0.5s";
+                        content.style.opacity = "1";
+                    }, 10);
+                    toggleLink.textContent = "[Ocultar]";
+                } else {
+                    content.style.transition = "opacity 0.5s";
+                    content.style.opacity = "0";
+                    setTimeout(function() {
+                        content.style.display = "none";
+                    }, 500);
+                    toggleLink.textContent = "[Mostrar]";
+                }
+            }
 
-    <!-- Bootstrap JS -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- Prism JS para resaltar código -->
-    <script src="js/prism.js"></script>
+            // Vincular el evento al encabezado
+            var header = document.querySelector(".info-header");
+            if (header) {
+                header.addEventListener("click", toggleInfo);
+            } else {
+                console.log("Elemento .info-header no encontrado.");
+            }
+        });
+    </script>
+    <!-- Scroll Suave -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
