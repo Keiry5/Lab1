@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+    <title>Estilo Web Informativo</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Intro a PHP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#intro">Introducción</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#if">If</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#switch">Switch</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#while">While</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#for">For</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#foreach">Foreach</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container mt-5">
+        <section id="intro">
+            <h1 class="text-center mb-4">Introducción a la Programación Web con PHP</h1>
+            <p>PHP es un lenguaje de programación de servidor ampliamente usado para el desarrollo web. Es ideal para principiantes porque es fácil de aprender y se integra bien con HTML. En esta página, exploraremos estructuras de control básicas que te ayudarán a controlar el flujo de tu código.</p>
+        </section>
+
+        <section id="if" class="mt-5">
+            <div class="card">
+                <div class="card-header bg-info text-white"><h2>If</h2></div>
+                <div class="card-body">
+                    <p>La estructura <code>if</code> se usa para ejecutar código si una condición es verdadera. Puedes agregar <code>else</code> para alternativas.</p>
+                    <pre><code class="language-php">&lt;?php
+$edad = 18;
+if ($edad >= 18) {
+    echo "Eres mayor de edad.";
+} else {
+    echo "Eres menor de edad.";
+}
+?&gt;</code></pre>
+                    <p>Ejemplo: Verifica si un usuario puede votar basado en su edad.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="switch" class="mt-5">
+            <div class="card">
+                <div class="card-header bg-info text-white"><h2>Switch</h2></div>
+                <div class="card-body">
+                    <p>La estructura <code>switch</code> evalúa una variable contra múltiples casos, ideal para menús o selecciones.</p>
+                    <pre><code class="language-php">&lt;?php
+$dia = "Lunes";
+switch ($dia) {
+    case "Lunes":
+        echo "Inicio de semana.";
+        break;
+    case "Viernes":
+        echo "Fin de semana cerca.";
+        break;
+    default:
+        echo "Día normal.";
+}
+?&gt;</code></pre>
+                    <p>Ejemplo: Muestra un mensaje según el día de la semana.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="while" class="mt-5">
+            <div class="card">
+                <div class="card-header bg-info text-white"><h2>While</h2></div>
+                <div class="card-body">
+                    <p>El bucle <code>while</code> repite código mientras una condición sea verdadera.</p>
+                    <pre><code class="language-php">&lt;?php
+$contador = 1;
+while ($contador <= 5) {
+    echo "Número: $contador &lt;br&gt;";
+    $contador++;
+}
+?&gt;</code></pre>
+                    <p>Ejemplo: Imprime números del 1 al 5.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="for" class="mt-5">
+            <div class="card">
+                <div class="card-header bg-info text-white"><h2>For</h2></div>
+                <div class="card-body">
+                    <p>El bucle <code>for</code> es compacto para repeticiones con contador conocido.</p>
+                    <pre><code class="language-php">&lt;?php
+for ($i = 0; $i < 10; $i++) {
+    echo "Iteración: $i &lt;br&gt;";
+}
+?&gt;</code></pre>
+                    <p>Ejemplo: Cuenta del 0 al 9.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="foreach" class="mt-5">
+            <div class="card">
+                <div class="card-header bg-info text-white"><h2>Foreach</h2></div>
+                <div class="card-body">
+                    <p>El bucle <code>foreach</code> itera sobre arrays o colecciones.</p>
+                    <pre><code class="language-php">&lt;?php
+$colores = array("rojo", "verde", "azul");
+foreach ($colores as $color) {
+    echo "Color: $color &lt;br&gt;";
+}
+?&gt;</code></pre>
+                    <p>Ejemplo: Lista colores de un array.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Prism JS para resaltar código -->
+    <script src="js/prism.js"></script>
+</body>
+</html>
